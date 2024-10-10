@@ -1,0 +1,130 @@
+/* Estilo general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f8fa; /* Fondo claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #00bbc8;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.home-button i {
+  display: inline-block;
+  line-height: 1;  /* Asegura que el ícono esté centrado */
+}
+
+.home-button:hover {
+  background-color: #00809c;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Estilo común para ambos formularios (login y register) */
+.box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #003958; /* Azul oscuro para los títulos */
+  font-size: 28px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #003958; /* Azul oscuro */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #00bbc8; /* Verde aguamarina */
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background-color: #00bbc8; /* Verde aguamarina */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00809c; /* Azul turquesa oscuro en hover */
+}
+
+p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+p a {
+  color: #003958; /* Azul oscuro para los enlaces */
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+#register-box {
+  display: none;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .box {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
