@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Exámenes</title>
+    <link rel="stylesheet" href="../css/styles_ManageExams.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Logo_IW.jpg" alt="Logo">
+        <span>Super Admin - Gestión de Exámenes</span>
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-primary" id="back-button">Volver</button>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Crear Examen</h1>
+
+    <div class="exam-form box">
+        <h2>Detalles del Examen</h2>
+        <form id="exam-form">
+            <!-- Nombre del examen -->
+            <div class="input-group">
+                <label for="exam-name">Nombre del Examen</label>
+                <input type="text" id="exam-name" name="exam-name" required>
+            </div>
+
+            <!-- Asignar un curso al examen -->
+            <div class="input-group">
+                <label for="exam-course">Asignar Curso</label>
+                <select id="exam-course" name="exam-course" required>
+                    <option value="" disabled selected>Selecciona un Curso</option>
+                    <option value="curso1">Curso 1</option>
+                    <option value="curso2">Curso 2</option>
+                    <option value="curso3">Curso 3</option>
+                </select>
+            </div>
+
+            <!-- Contenedor de preguntas -->
+            <div id="questions-container">
+                <h2>Preguntas del Examen</h2>
+
+                <!-- Pregunta 1 -->
+                <div class="question">
+                    <label for="question1">Pregunta 1:</label>
+                    <input type="text" id="question1" name="question1" required>
+                    
+                    <!-- Opciones para Pregunta 1 -->
+                    <div class="options">
+                        <div class="option-item">
+                            <input type="radio" name="q1-correct" value="q1-option1" required>
+                            <label for="q1-option1">Opción 1</label>
+                            <input type="text" id="q1-option1" name="q1-option1" required>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" name="q1-correct" value="q1-option2">
+                            <label for="q1-option2">Opción 2</label>
+                            <input type="text" id="q1-option2" name="q1-option2" required>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" name="q1-correct" value="q1-option3">
+                            <label for="q1-option3">Opción 3</label>
+                            <input type="text" id="q1-option3" name="q1-option3" required>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" name="q1-correct" value="q1-option4">
+                            <label for="q1-option4">Opción 4</label>
+                            <input type="text" id="q1-option4" name="q1-option4" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón para agregar más preguntas -->
+                <button type="button" class="btn-secondary" id="add-question-btn">Agregar otra pregunta</button>
+            </div>
+
+            <!-- Botón para guardar el examen -->
+            <button type="submit" class="btn-primary">Guardar Examen</button>
+        </form>
+    </div>
+</div>
+
+<!-- Enlazamos el archivo JavaScript -->
+<script src="../js/script_exams.js"></script>
+
+</body>
+</html>

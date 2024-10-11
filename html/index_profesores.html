@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Profesores</title>
+    <link rel="stylesheet" href="../css/styles_Profesor.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Logo_IW.jpg" alt="Logo">
+        <span>Panel de Profesores</span>
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-primary" onclick="location.href='index_Login.html'">Cerrar Sesión</button>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Mis Cursos Asignados</h1>
+
+    <!-- Listado de cursos asignados al profesor -->
+    <div class="course-list box">
+        <h2>Cursos</h2>
+        <ul id="course-list">
+            <li>Curso de Programación Básica</li>
+            <li>Curso de Matemáticas Avanzadas</li>
+            <!-- Aquí se cargarán dinámicamente los cursos asignados -->
+        </ul>
+    </div>
+
+    <h2>Comentarios de Estudiantes</h2>
+
+    <!-- Comentarios de los estudiantes -->
+    <div class="comments-section box">
+        <div class="comment">
+            <p><strong>Juan Pérez:</strong> El curso ha sido muy útil, pero me gustaría que se ampliara la sección de arrays.</p>
+            <textarea placeholder="Responder a este comentario"></textarea>
+            <button class="btn-secondary">Responder</button>
+        </div>
+        <div class="comment">
+            <p><strong>María López:</strong> Me encantó el curso, aprendí mucho sobre matrices.</p>
+            <textarea placeholder="Responder a este comentario"></textarea>
+            <button class="btn-secondary">Responder</button>
+        </div>
+        <!-- Aquí se generarán dinámicamente los comentarios -->
+    </div>
+
+    <!-- Espacio para agregar nuevos comentarios -->
+    <h2>Agregar Comentario</h2>
+    <form id="comment-form">
+        <div class="input-group">
+            <label for="comment">Escribe un comentario sobre el curso:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar Comentario</button>
+    </form>
+
+</div>
+
+<!-- Enlazamos el archivo JavaScript -->
+<script src="../js/script_profesor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Becas</title>
+    <link rel="stylesheet" href="../css/styles_becas.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Logo_IW.jpg" alt="Logo">
+        <span>Super Admin - Gestión de Becas</span>
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-primary" id="back-button">Volver</button>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Solicitudes de Becas</h1>
+
+    <!-- Listado de solicitudes de becas -->
+    <div class="scholarship-requests box">
+        <h2>Solicitudes Pendientes</h2>
+        <table id="scholarship-table">
+            <thead>
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Curso</th>
+                    <th>Fecha de Solicitud</th>
+                    <th>Evaluar Solicitud</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de solicitud -->
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>Curso de Programación</td>
+                    <td>10/10/2024</td>
+                    <td><button class="btn-secondary" onclick="openEvaluationModal('Juan Pérez', 'Curso de Programación')">Evaluar</button></td>
+                </tr>
+                <!-- Aquí se generarán dinámicamente las solicitudes -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal para evaluar la solicitud de beca -->
+<div id="evaluation-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Evaluar Solicitud de Beca</h2>
+
+        <div id="evaluation-details">
+            <p><strong>Estudiante:</strong> <span id="student-name"></span></p>
+            <p><strong>Curso:</strong> <span id="course-name"></span></p>
+        </div>
+
+        <!-- Formulario de evaluación -->
+        <form id="evaluation-form" onsubmit="submitEvaluation(event)">
+            <div class="input-group">
+                <label for="evaluation-result">Resultado</label>
+                <select id="evaluation-result" name="evaluation-result" required>
+                    <option value="" disabled selected>Selecciona un resultado</option>
+                    <option value="aprobado">Aprobar con Beca Completa</option>
+                    <option value="rechazado">Rechazar</option>
+                    <option value="parcial">Aprobar con Beca Parcial</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="percentage-group" style="display: none;">
+                <label for="percentage">Porcentaje de Beca</label>
+                <input type="number" id="percentage" name="percentage" min="0" max="100" placeholder="0-100%">
+            </div>
+
+            <button type="submit" class="btn-primary">Guardar Evaluación</button>
+        </form>
+    </div>
+</div>
+
+<!-- Enlazamos el archivo JavaScript -->
+<script src="../js/script_becas.js"></script>
+
+</body>
+</html>

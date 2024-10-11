@@ -1,0 +1,188 @@
+/* Fuente y Estilo General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa;
+    color: #003958;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #005676;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 15px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  
+  .logo span {
+    font-size: 18px;
+    color: white;
+  }
+  
+  .nav-buttons button {
+    margin-left: 15px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #00bbc8;
+    color: white;
+    border: none;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #00809c;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 1200px;
+    margin-top: 120px;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #005676;
+  }
+  
+  /* Tabla de solicitudes */
+  .scholarship-requests {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #005676;
+    color: white;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  td button {
+    padding: 8px 12px;
+    background-color: #00bbc8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  td button:hover {
+    background-color: #00809c;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .modal-content .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .modal-content .input-group input, .modal-content .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .modal-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bbc8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #00809c;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff0000;
+  }
+  

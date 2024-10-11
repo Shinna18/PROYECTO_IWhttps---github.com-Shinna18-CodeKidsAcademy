@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos</title>
+    <link rel="stylesheet" href="../css/style_ManageCourses.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Logo_IW.jpg" alt="Logo">
+        <span>Super Admin - Gestión de Cursos</span>
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-primary" id="back-button">Volver</button>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Subir Nuevo Curso</h1>
+
+    <div class="course-form box">
+        <h2>Detalles del Curso</h2>
+        <form id="course-form" onsubmit="submitCourse(event)">
+            <!-- Nombre del curso -->
+            <div class="input-group">
+                <label for="course-name">Nombre del Curso</label>
+                <input type="text" id="course-name" name="course-name" required>
+            </div>
+
+            <!-- Descripción del curso -->
+            <div class="input-group">
+                <label for="course-description">Descripción del Curso</label>
+                <textarea id="course-description" name="course-description" rows="4" required></textarea>
+            </div>
+
+            <!-- Subir videos -->
+            <div class="input-group">
+                <label for="course-videos">Subir Videos</label>
+                <input type="file" id="course-videos" name="course-videos" multiple accept="video/*" required>
+            </div>
+
+            <!-- Subir documentos -->
+            <div class="input-group">
+                <label for="course-documents">Subir Documentos</label>
+                <input type="file" id="course-documents" name="course-documents" multiple accept=".pdf,.doc,.docx,.ppt,.pptx" required>
+            </div>
+
+            <!-- Subir materiales -->
+            <div class="input-group">
+                <label for="course-materials">Subir Materiales</label>
+                <input type="file" id="course-materials" name="course-materials" multiple accept="application/zip,application/pdf" required>
+            </div>
+
+            <!-- Seleccionar profesor -->
+            <div class="input-group">
+                <label for="course-teacher">Asignar Profesor</label>
+                <select id="course-teacher" name="course-teacher" required>
+                    <option value="" disabled selected>Selecciona un Profesor</option>
+                    <option value="profesor1@example.com">Profesor 1</option>
+                    <option value="profesor2@example.com">Profesor 2</option>
+                    <option value="profesor3@example.com">Profesor 3</option>
+                </select>
+            </div>
+
+            <!-- Botón para enviar el curso -->
+            <button type="submit" class="btn-primary">Subir Curso</button>
+        </form>
+    </div>
+</div>
+
+<!-- Enlazamos el archivo JavaScript -->
+<script src="../js/script_course.js"></script>
+
+</body>
+</html>

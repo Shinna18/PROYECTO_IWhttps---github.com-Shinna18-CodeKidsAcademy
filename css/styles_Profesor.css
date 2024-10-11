@@ -1,0 +1,143 @@
+/* Fuente y Estilo General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa;
+    color: #003958;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #003958;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 15px;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.logo span {
+    font-size: 18px;
+    color: white;
+}
+
+.nav-buttons button {
+    margin-left: 15px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #00bbc8;
+    color: white;
+    border: none;
+}
+
+.nav-buttons button:hover {
+    background-color: #00809c;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #005676;
+}
+
+/* Sección de Cursos */
+.course-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.course-list li {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Sección de Comentarios */
+.comments-section .comment {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.comments-section .comment p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comments-section .comment textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.comments-section .comment button {
+    padding: 10px 20px;
+    background-color: #00bbc8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.comments-section .comment button:hover {
+    background-color: #00809c;
+}
+
+/* Formulario de comentario */
+#comment-form .input-group {
+    margin-bottom: 20px;
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#comment-form button {
+    padding: 10px 20px;
+    background-color: #00bbc8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#comment-form button:hover {
+    background-color: #00809c;
+}
