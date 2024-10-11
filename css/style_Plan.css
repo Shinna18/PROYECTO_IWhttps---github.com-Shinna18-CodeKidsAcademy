@@ -10,7 +10,6 @@ body, html {
   min-height: 100vh;
 }
 
-
 .home-button {
   position: absolute;
   top: 20px;
@@ -55,10 +54,10 @@ h2 {
 
 /* Contenedor de los planes */
 .plans {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Uso de grid para adaptar el contenido */
-  gap: 20px;
-  justify-items: center;
+  display: flex;                  /* Usamos flexbox */
+  flex-wrap: wrap;                /* Permite que las tarjetas se envuelvan en líneas nuevas si el espacio es pequeño */
+  justify-content: space-around;  /* Espaciamos las tarjetas uniformemente */
+  gap: 20px;                      /* Espacio entre las tarjetas */
 }
 
 .plan {
@@ -67,7 +66,7 @@ h2 {
   border-radius: 15px;
   padding: 30px;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;          /* Limitar el ancho máximo de las tarjetas */
   text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -114,10 +113,11 @@ h2 {
 /* Diseño responsivo */
 @media (max-width: 768px) {
   .plans {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* Las tarjetas se apilan verticalmente en pantallas pequeñas */
+    align-items: center;    /* Centrar las tarjetas */
   }
 
   .plan {
-    width: 90%;
+    width: 90%; /* Ocupan el 90% del ancho en pantallas pequeñas */
   }
 }
