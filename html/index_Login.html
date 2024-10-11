@@ -32,24 +32,7 @@
     </div>
 </div>
 
-<script>
-    function login(event) {
-        event.preventDefault(); // Evita que el formulario se envíe
-
-        const email = document.getElementById('email').value;
-
-        // Verificar el correo estático
-        if (email === "superadmin@example.com") {
-            // Redirigir al panel de Super Admin
-            window.location.href = "superadmin_dashboard.html";
-        } else if (email === "admin@example.com") {
-            // Redirigir al panel de Admin
-            window.location.href = "admin_dashboard.html";
-        } else {
-            alert("Correo no reconocido. Por favor ingrese un correo válido.");
-        }
-    }
-</script>
+<script src="script_Login.js"></script>
 
 </body>
 </html>
