@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Super Admin</title>
+    <link rel="stylesheet" href="../css/style_SuperAdmin.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Logo_IW.jpg" alt="Logo">
+        <span>Super Admin</span>
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-primary" onclick="location.href='login.html'">Cerrar Sesión</button>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Panel de Super Admin</h1>
+
+    <div class="grid-container">
+        <!-- Botón para la gestión de exámenes -->
+        <div class="grid-item" onclick="window.location.href='manage_exams.html'">
+            <img src="../img/Examenes.jpeg" alt="Gestión de Exámenes">
+            <h3>Gestión de Exámenes</h3>
+        </div>
+
+        <!-- Botón para la gestión de cursos -->
+        <div class="grid-item" onclick="window.location.href='manage_courses.html'">
+            <img src="../img/Cursos.jpeg" alt="Gestión de Cursos">
+            <h3>Gestión de Cursos</h3>
+        </div>
+
+        <!-- Botón para la supervisión de becas -->
+        <div class="grid-item" onclick="window.location.href='manage_scholarships.html'">
+            <img src="../img/Becas.jpeg" alt="Supervisión de Becas">
+            <h3>Supervisión de Becas</h3>
+        </div>
+
+        <!-- Botón para la gestión de administradores -->
+        <div class="grid-item" onclick="window.location.href='manage_admins.html'">
+            <img src="../img/Administradores.jpeg" alt="Gestión de Administradores">
+            <h3>Gestión de Administradores</h3>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

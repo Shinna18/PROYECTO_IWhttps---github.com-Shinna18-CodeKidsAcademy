@@ -7,37 +7,41 @@
 
 body, html {
   font-family: 'Roboto', sans-serif;
-  background-color: #f7f8fa; /* Fondo claro */
+  background-color: #f7f8fa;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.home-button {
+/* Botón de regresar a la página principal */
+.back-button {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 50px;
-  height: 50px;
+  font-size: 16px;
+  color: #003958;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #f7f8fa;
+  border: 2px solid #00bbc8;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button i {
+  font-size: 20px;
+}
+
+.back-button:hover {
   background-color: #00bbc8;
   color: white;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
 }
 
-.home-button i {
-  display: inline-block;
-  line-height: 1;  /* Asegura que el ícono esté centrado */
-}
-
-.home-button:hover {
-  background-color: #00809c;
-}
-
+/* Contenedor y diseño del formulario */
 .auth-container {
   display: flex;
   flex-direction: column;
@@ -45,62 +49,62 @@ body, html {
   gap: 30px;
 }
 
-/* Estilo común para ambos formularios (login y register) */
 .box {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 40px;
+  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px; /* Ancho mayor para hacer el formulario más moderno */
 }
 
 h2 {
-  margin-bottom: 20px;
-  color: #003958; /* Azul oscuro para los títulos */
-  font-size: 28px;
+  margin-bottom: 30px;
+  color: #003958;
+  font-size: 32px; /* Fuente más grande */
   text-align: center;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: bold;
-  color: #003958; /* Azul oscuro */
+  color: #003958;
 }
 
 .input-group input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 10px; /* Bordes más redondeados */
+  font-size: 18px;
+  transition: border-color 0.3s ease;
 }
 
 .input-group input:focus {
   outline: none;
-  border-color: #00bbc8; /* Verde aguamarina */
+  border-color: #00bbc8;
 }
 
 .btn-primary {
   width: 100%;
   padding: 15px;
-  background-color: #00bbc8; /* Verde aguamarina */
+  background-color: #00bbc8;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 10px;
+  font-size: 20px;
   cursor: pointer;
   margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #00809c; /* Azul turquesa oscuro en hover */
+  background-color: #00809c;
 }
 
 p {
@@ -109,22 +113,10 @@ p {
 }
 
 p a {
-  color: #003958; /* Azul oscuro para los enlaces */
+  color: #003958;
   text-decoration: none;
 }
 
 p a:hover {
   text-decoration: underline;
-}
-
-#register-box {
-  display: none;
-}
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 600px) {
-  .box {
-    padding: 20px;
-    max-width: 100%;
-  }
 }

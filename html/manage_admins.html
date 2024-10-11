@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Administradores</title>
+    <link rel="stylesheet" href="../css/style_AdminManage.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Logo_IW.jpg" alt="Logo">
+        <span>Super Admin - Gestión de Administradores</span>
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-primary" onclick="location.href='superadmin_dashboard.html'">Volver al Panel</button>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Gestión de Administradores</h1>
+
+    <!-- Formulario para agregar nuevo Admin -->
+    <div class="admin-form box">
+        <h2>Agregar Nuevo Administrador</h2>
+        <form id="admin-form" onsubmit="addAdmin(event)">
+            <div class="input-group">
+                <label for="admin-email">Correo Electrónico del Admin</label>
+                <input type="email" id="admin-email" name="email" required>
+            </div>
+            <button type="submit" class="btn-primary">Hacer Admin</button>
+        </form>
+    </div>
+
+    <!-- Sección para otorgar permisos -->
+    <div class="permissions box">
+        <h2>Otorgar Permisos</h2>
+        <form id="permissions-form">
+            <div class="input-group">
+                <label for="admin-select">Seleccionar Administrador</label>
+                <select id="admin-select" required>
+                    <option value="" disabled selected>Selecciona un Admin</option>
+                    <option value="admin1@example.com">admin1@example.com</option>
+                    <option value="admin2@example.com">admin2@example.com</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="permissions">Permisos</label>
+                <select id="permissions" required>
+                    <option value="" disabled selected>Selecciona un permiso</option>
+                    <option value="manage_exams">Gestión de Exámenes</option>
+                    <option value="manage_courses">Gestión de Cursos</option>
+                    <option value="manage_scholarships">Supervisión de Becas</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary">Otorgar Permiso</button>
+        </form>
+    </div>
+
+</div>
+
+<script>
+    function addAdmin(event) {
+        event.preventDefault();
+        const adminEmail = document.getElementById('admin-email').value;
+        alert(`Admin con el correo ${adminEmail} ha sido agregado exitosamente.`);
+    }
+
+    document.getElementById('permissions-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedAdmin = document.getElementById('admin-select').value;
+        const selectedPermission = document.getElementById('permissions').value;
+        alert(`Permiso "${selectedPermission}" otorgado al administrador "${selectedAdmin}".`);
+    });
+</script>
+
+</body>
+</html>

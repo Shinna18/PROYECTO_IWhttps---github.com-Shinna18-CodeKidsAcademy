@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Roles</title>
+    <link rel="stylesheet" href="../css/style_Autenticacion.css">
+</head>
+<body>
+<div class="roles-container">
+    <h2>Asignar Rol</h2>
+    <form action="roles.php" method="POST">
+        <input type="email" name="email" placeholder="Correo del Usuario" required>
+        <select name="role" required>
+            <option value="Admin">Admin</option>
+            <option value="SuperAdmin">SuperAdmin</option>
+        </select>
+        <button type="submit">Asignar Rol</button>
+    </form>
+</div>
+</body>
+</html>
